@@ -1,0 +1,20 @@
+{
+  "name": "apk-identifier",
+  "version": "1.0.0",
+  "description": "A simple APK platform identifier",
+  "main": "./src/main.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "node src/main.js"
+  },
+  "author": "Leandro S Q",
+  "license": "MIT",
+  "dependencies": {
+    "args": "^5.0.1",
+    "chalk": "^2.4.2",
+    "extract-zip": "^1.6.7",
+    "fs-extra": "^8.1.0"
+  }
+}
