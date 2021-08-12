@@ -1,15 +1,25 @@
 {
 	"name": "@leandrosq/apk-classifier",
-	"version": "1.5.7",
+	"version": "1.5.8",
 	"description": "APK platform classifier",
 	"main": "src/main.js",
-  "bin": "src/main.js",
+	"bin": "src/main.js",
 	"scripts": {
 		"start": "node src/main.js"
 	},
 	"author": "LeandroSQ",
 	"license": "MIT",
-  "keywords": ["Cordova", "Ionic", "PhoneGap", "React", "React native", "Native", "Flutter", "APK", "Platform"],
+	"keywords": [
+		"Cordova",
+		"Ionic",
+		"PhoneGap",
+		"React",
+		"React native",
+		"Native",
+		"Flutter",
+		"APK",
+		"Platform"
+	],
 	"repository": "git://github.com/LeandroSQ/apk-classifier",
 	"dependencies": {
 		"args": "^5.0.1",
