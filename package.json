@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/main.js"
   },
-  "author": "Leandro Soares Quevedo",
+  "author": "leandro.sq",
   "license": "MIT",
   "dependencies": {
     "args": "^5.0.1",

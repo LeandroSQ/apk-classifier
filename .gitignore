@@ -3,3 +3,4 @@ examples
 vs_code
 .DS_Store
 package-lock.json
+.npmrc

@@ -1,7 +1,7 @@
 # APK Classifier
 Detect the platform of which an APK file was build on top.
 
-![Example](.github/images/screenshot.png)
+![Example](https://raw.githubusercontent.com/LeandroSQ/APK-Classifier/master/.github/images/screenshot.png)
 _Example of an .apk file built using Ionic_
 
 ## Platforms supported
