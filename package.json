@@ -1,15 +1,12 @@
 {
-  "name": "apk-identifier",
-  "version": "1.0.0",
-  "description": "A simple APK platform identifier",
+  "name": "apk-classifier",
+  "version": "1.5.0",
+  "description": "A simple APK platform classifier",
   "main": "./src/main.js",
-  "directories": {
-    "example": "examples"
-  },
   "scripts": {
-    "test": "node src/main.js"
+    "start": "node src/main.js"
   },
-  "author": "Leandro S Q",
+  "author": "Leandro Soares Quevedo",
   "license": "MIT",
   "dependencies": {
     "args": "^5.0.1",

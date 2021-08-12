@@ -1,2 +1,5 @@
-node_modules/
-examples/*
+node_modules
+examples
+vs_code
+.DS_Store
+package-lock.json
