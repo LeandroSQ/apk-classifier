@@ -1,6 +1,6 @@
 {
   "name": "apk-classifier",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "A simple APK platform classifier",
   "main": "./src/main.js",
   "scripts": {
