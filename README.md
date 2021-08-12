@@ -18,8 +18,8 @@ _Example of an .apk file built using Ionic_
 ## Usage
 ### Using npx
 - Run the script
-  - For a single file: `npx apk-classifier -f <FILE_PATH.apk>`
-  - For multiple files: `npx apk-classifier -d <DIRECTORY_PATH>`
+  - For a single file: `npx @leandrosq/apk-classifier -f <FILE_PATH.apk>`
+  - For multiple files: `npx @leandrosq/apk-classifier -d <DIRECTORY_PATH>`
 ### Running by the source
 - Clone the repository
 - Run `npm install` for installing the dependencies
