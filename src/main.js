@@ -348,7 +348,6 @@ function predictPlatform(results) {
 
     let react = 0, flutter = 0, cordova = 0;
 
-
     // Reference checking
     if (results.react.references > results.flutter.references && results.react.references > results.cordova.references) {
         react++;
@@ -403,35 +402,11 @@ async function presentPlatformPrediction(results, file) {
     );
 }
 
-async function main() {
-    // Define CLI arguments
-    args.option("file", "Provide a single .apk to be classified")
-        .option("directory", "Provides a hole directory, containing multiple .apk files to be classified");
-    const flags = args.parse(process.argv);
-
-    let filesToProcess = [];
-
-    // Process them
-    if (flags.file) {
-        filesToProcess = flags.file;
-        if (!Array.isArray(filesToProcess)) filesToProcess = [filesToProcess];
-    } else if (flags.directory) {
-        // Multiple files
-        filesToProcess = fs.readdirSync(args.directory)
-                           .filter(x => x.endsWith(".apk"))
-                           .map(x => path.join(args.directory, x));
-
-    } else {
-        console.log("Invalid usage\n\n");
-        args.showHelp();
-
-        return;
-    }
-
+async function processFiles(files) {
     try {
         // Analyze every file
         let results = {};
-        for (let file of filesToProcess) {
+        for (let file of files) {
             results[file] = await analyzeApk(path.resolve(file));
         }
 
@@ -444,6 +419,33 @@ async function main() {
     } catch (e) {
         console.error(chalk.red(e));
         console.trace(e);
+    }
+}
+
+async function main() {
+    // Define CLI arguments
+    args.option("file", "Provide a single .apk to be classified")
+        .option("directory", "Provides a hole directory, containing multiple .apk files to be classified");
+    const flags = args.parse(process.argv);
+
+    // Process them
+    if (flags.file) {
+        let filesToProcess = flags.file;
+        if (!Array.isArray(filesToProcess)) filesToProcess = [filesToProcess];
+
+        processFiles(filesToProcess);
+    } else if (flags.directory) {
+        // Multiple files
+        let filesToProcess = fs.readdirSync(args.directory)
+                           .filter(x => x.endsWith(".apk"))
+                           .map(x => path.join(args.directory, x));
+
+        processFiles(filesToProcess);
+    } else {
+        console.log("Invalid usage\n\n");
+        args.showHelp();
+
+        return;
     }
 }
 

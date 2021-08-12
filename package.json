@@ -1,17 +1,14 @@
 {
-	"name": "@LeandroSQ/apk-classifier",
-	"version": "1.5.3",
+	"name": "@leandrosq/apk-classifier",
+	"version": "1.5.5",
 	"description": "A simple APK platform classifier",
 	"main": "src/main.js",
 	"scripts": {
 		"start": "node src/main.js"
 	},
-	"author": "leandro.sq",
+	"author": "LeandroSQ",
 	"license": "MIT",
 	"repository": "git://github.com/LeandroSQ/apk-classifier",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
 	"dependencies": {
 		"args": "^5.0.1",
 		"chalk": "^2.4.2",
