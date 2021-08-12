@@ -1,8 +1,8 @@
 {
 	"name": "@LeandroSQ/apk-classifier",
-	"version": "1.5.2",
+	"version": "1.5.3",
 	"description": "A simple APK platform classifier",
-	"main": "./src/main.js",
+	"main": "src/main.js",
 	"scripts": {
 		"start": "node src/main.js"
 	},
